@@ -1,0 +1,115 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+//.modal {
+//  &.show {
+//    display: block;
+//  }
+//  &.loaded {
+//    .modal-content {
+//      &::before {
+//        z-index: 2000;
+//        content: '';
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        display: block;
+//        width: 100%;
+//        height: 100%;
+//        opacity: 0.5;
+//        background-color: #000;
+//      }
+//      &::after {
+//        z-index: 3000;
+//        content: '';
+//        position: absolute;
+//        display: block;
+//        top: 0;
+//        bottom: 0;
+//        right: 0;
+//        left: 0;
+//        margin: auto;
+//        width: 70px;
+//        height: 70px;
+//        border-color: transparent #fff transparent #fff;
+//        border-style: solid;
+//        border-width: 10px;
+//        border-radius: 50%;
+//        animation: 1s rotate infinite;
+//      }
+//    }
+//  }
+//}
+
+/* Пагинация */
+.pagination {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 25px 0px;
+  padding: 0 15px;
+  max-width: 1280px;
+}
+
+.pagination__left, .pagination__right {
+  width: 10%;
+  height: 10px;
+}
+
+.pagination__left a {
+  float: left;
+}
+
+.pagination__right {
+  float: right;
+}
+
+.pagination__right a {
+  float: right;
+}
+
+.pagination a, .pagination span {
+  display: block;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  /*line-height: 42px;*/
+  /*height: 30px;*/
+  color: #999;
+  font-size: 16px;
+}
+
+.pagination a {
+  padding: 0 10px;
+  max-width: 160px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: all .2s ease-in-out;
+}
+
+.pagination a:hover, .pagination a.current {
+  border-color: rgb(33, 37, 41);
+  color: rgb(33, 37, 41);
+  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, .4);
+}
+
+.pagination__mid {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.pagination__mid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__mid li {
+  display: inline-block;
+}
