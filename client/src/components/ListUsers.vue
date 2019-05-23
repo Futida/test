@@ -20,8 +20,8 @@
           <b-button variant="danger" size="sm" @click="deleteUser(user._id)">Delete</b-button>
           <b-button variant="link" :to="'users/' + user._id">
             <font-awesome-icon
-              size="lg"
-              icon="arrow-circle-right"
+                size="lg"
+                icon="arrow-circle-right"
             />
           </b-button>
         </td>
