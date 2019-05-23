@@ -16,8 +16,12 @@
         <td>{{user.lastName}}</td>
         <td>{{user.email}}</td>
         <td class="d-flex justify-content-around">
-          <b-button class="btn-modal" variant="primary" @click="showEditModal(user)">Edit</b-button>
-          <b-button variant="danger" size="sm" @click="deleteUser(user._id)">Delete</b-button>
+          <b-button class="btn-modal" variant="primary" @click="showEditModal(user)">
+            {{ $t('user.edit') }}
+          </b-button>
+          <b-button variant="danger" size="sm" @click="deleteUser(user._id)">
+            {{ $t('user.delete') }}
+          </b-button>
           <b-button variant="link" :to="'users/' + user._id">
             <font-awesome-icon
                 size="lg"

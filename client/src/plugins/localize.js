@@ -17,7 +17,13 @@ const messages = {
       enterLastName: 'Enter last name:',
       create: 'Create',
       reset: 'Reset fields',
-      emailIncorrect: 'Incorrect email'
+      emailIncorrect: 'Incorrect email',
+      edit: 'Edit',
+      delete: 'Delete'
+    },
+    pagination: {
+      prev: 'Previous',
+      next: 'Next'
     }
   },
   'ru': {
@@ -33,7 +39,13 @@ const messages = {
       enterLastName: 'Введите фамилию:',
       create: 'Cоздать',
       reset: 'Очистить поля',
-      emailIncorrect: 'Неверный email'
+      emailIncorrect: 'Неверный email',
+      edit: 'Редактировать',
+      delete: 'Удалить'
+    },
+    pagination: {
+      prev: 'Предыдущая',
+      next: 'Следующая'
     }
   }
 };

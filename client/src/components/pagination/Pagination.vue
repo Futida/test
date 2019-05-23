@@ -1,6 +1,10 @@
 <template>
   <div class="pagination">
-    <div class="pagination__left"><a href="#" v-if="hasPrev()" @click=changePage(prevPage)>Previous</a></div>
+    <div class="pagination__left">
+      <a href="#" v-if="hasPrev()" @click=changePage(prevPage)>
+        {{ $t('pagination.prev') }}
+      </a>
+    </div>
     <div class="pagination__mid">
       <!--<span>{{ current }} of {{ total }} </span>-->
       <ul>
@@ -9,7 +13,11 @@
         </li>
       </ul>
     </div>
-    <div class="pagination__right"><a href="#" v-if="hasNext()" @click=changePage(nextPage)>Next</a></div>
+    <div class="pagination__right">
+      <a href="#" v-if="hasNext()" @click=changePage(nextPage)>
+      {{ $t('pagination.next') }}
+    </a>
+    </div>
   </div>
 </template>
 
@@ -64,7 +72,7 @@
         return this.current > 1
       },
       hasNext: function() {
-        return this.current < this.total
+        return this.current * this.perPage < this.total
       },
       changePage: function(page) {
         this.$emit('change', page)
