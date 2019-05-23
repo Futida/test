@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="pagination__mid">
-      <!--<span>{{ current }} of {{ total }} </span>-->
+      <span>{{ quantity  }} of {{ total }} </span>
       <ul>
         <li v-for="page in pages">
           <a href="#" @click="changePage(page)" :class="{ current: current === page }">{{ page }}</a>
@@ -65,6 +65,13 @@
       },
       prevPage: function() {
         return this.current - 1
+      },
+      quantity: function() {
+        const amount = this.current * this.perPage
+        if(amount > this.total) {
+          return this.total
+        }
+        return amount
       }
     },
     methods: {
