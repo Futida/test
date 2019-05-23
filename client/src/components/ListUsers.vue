@@ -44,7 +44,7 @@
                     label-for="exampleInput1">
         <b-form-input id="exampleInput1"
                       type="email"
-                      required
+                      disabled
                       placeholder="Edit email"
                       v-model="editUser.email"
         ></b-form-input>
@@ -101,10 +101,10 @@
       ...mapActions({
         getUsers: types.GET_LIST_USERS,
         deleteUser: types.DELETE_USER,
-        UPDATE_USER: types.UPDATE_USER,
+        edit: types.UPDATE_USER,
       }),
       updateUser(data) {
-        this.UPDATE_USER(data);
+        this.edit(data);
         this.$refs.editModal.hide();
       },
       showEditModal(item) {

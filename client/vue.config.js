@@ -4,7 +4,7 @@ module.exports = {
       historyApiFallback: true,
       noInfo: true,
       overlay: true,
-      port: 7000,
+      port: 9000,
       proxy: {
         '/api/*': {
           target: 'http://localhost:4000',
